@@ -90,7 +90,7 @@ for i in xrange(jump * n_epochs):
     y_batch = np.array([train_data[(jump * j + i + 1) % whole_len]
                         for j in xrange(batchsize)])
 
-    if args.gpu >=0:
+    if args.gpu > 0:
         x_batch = cuda.to_gpu(x_batch)
         y_batch = cuda.to_gpu(y_batch)
 
